@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Description</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .book-description {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .book-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .book-title {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .book-author, .book-publishYear, .book-type {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .book-details {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .book-details p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="book-description">
+        <img src="<%= book.image %>" alt="Book cover" class="book-image">
+        <h1 class="book-title"><%= book.title %></h1>
+        <p class="book-author">Author: <%= book.author %></p>
+        <p class="book-publishYear">Publish Year: <%= book.publishYear %></p>
+        <p class="book-type">Type: <%= book.type %></p>
+        <div class="book-details">
+            <p><strong>Description:</strong></p>
+            <p><%= book.description %></p>
+            <p><strong>Publisher:</strong> <%= book.publisher %></p>
+            <p><strong>Published Date:</strong> <%= book.publishedDate %></p>
+            <p><strong>ISBN:</strong> <%= book.isbn %></p>
+            <!-- Add more book details here if needed -->
+        </div>
+    </div>
+</body>
+</html>
